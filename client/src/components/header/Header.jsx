@@ -5,7 +5,7 @@ import Navbar from './navbar/Navbar';
 function Header() {
   return (
     <div className='header'>
-      <h1 style={{padding:0,margin :0}}>Header</h1>
+      <h1 className='text-lg'>Header</h1>
         <Navbar/>
     </div>
   )
