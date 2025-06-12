@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { electronicService } from '../../services/electronics/electronicsServices';
+import { jeweleryService } from '../../services/jewelery/jeweleryServices';
 import Header from '../../header/Header';
-import {Link} from 'react-router-dom';
 
-function Electronics() {
-   let[electronicProducts ,setElectronicProducts ] = useState([]);
+function Jewellery() {
+   let[jeweleryProducts ,setjeweleryProducts ] = useState([]);
 
    useEffect(()=>{
 
-       electronicService().then((response)=>{
+       jeweleryService().then((response)=>{
            console.log(response.data);
-           setElectronicProducts(response.data);
+           setjeweleryProducts(response.data);
        }).catch((error)=>{
            console.log(error);
        })
@@ -21,8 +20,8 @@ function Electronics() {
     <div>
         <Header></Header>
         {
-            electronicProducts.length>0 ? <div className='flex flex-wrap justify-evenly items-center'>
-                {electronicProducts.map((element)=>{
+            jeweleryProducts.length>0 ? <div className='flex flex-wrap justify-evenly items-center'>
+                {jeweleryProducts.map((element)=>{
                     // return <div>
                     //     <img src={element.image} alt="" />
                     //     <h2>{element.title}</h2>
@@ -58,7 +57,6 @@ function Electronics() {
         </div> */}
         <div class="flex items-center justify-between">
             <span class="text-3xl font-bold text-gray-900 dark:text-white">&#36;{element.price}</span>
-            <Link to={`/productdetails/${element.id}`} class="text-white bg-blue-700 hover:bg-blue-800   focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 ">Product Details</Link>
             <a href="#" class="text-white bg-blue-700 hover:bg-blue-800   focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 ">Add to cart</a>
         </div>
     </div>
@@ -73,4 +71,4 @@ function Electronics() {
   )
 }
 
-export default Electronics
+export default Jewellery
