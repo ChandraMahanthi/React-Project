@@ -28,7 +28,7 @@ function Electronics() {
                     //     <h2>{element.title}</h2>
                     //     <h3>{element.price}</h3>
                     // </div>
-                    return <div class="my-20 mx-5 w-full h-140 max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-200 transition-all duration-1000">
+                    return <div class="my-20 mx-10 w-300 h-140 max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-200 transition-all duration-1000">
     <a href="#">
         <img class="p-8 rounded-t-lg w-100 h-100" src={element.image} alt="product image" />
     </a>
@@ -58,7 +58,7 @@ function Electronics() {
         </div> */}
         <div class="flex items-center justify-between">
             <span class="text-3xl font-bold text-gray-900 dark:text-white">&#36;{element.price}</span>
-            <Link to={`/productdetails/${element.id}`} class="text-white bg-blue-700 hover:bg-blue-800   focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 ">Product Details</Link>
+            <Link to={`/productdetails/${element.id}`} class="text-white bg-blue-700 hover:bg-blue-800  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-2 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 ">Product Details</Link>
             <a href="#" class="text-white bg-blue-700 hover:bg-blue-800   focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 ">Add to cart</a>
         </div>
     </div>
